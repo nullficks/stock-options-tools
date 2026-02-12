@@ -1,0 +1,15 @@
+version: '3.8'
+
+services:
+  stock-options:
+    build: .
+    container_name: stock-options-lab
+    ports:
+      - "3002:80"
+    restart: unless-stopped
+    networks:
+      - options-network
+
+networks:
+  options-network:
+    driver: bridge
