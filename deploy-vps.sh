@@ -7,6 +7,7 @@ set -e
 DOMAIN="options.brennpunkt-index.de"
 WEB_ROOT="/var/www/stock-options-tools"
 NGINX_CONF="/etc/nginx/sites-available/stock-options-tools"
+PORT="3000"
 
 echo "=== Stock Options Lab VPS Deploy Script ==="
 
