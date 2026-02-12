@@ -290,12 +290,3 @@ class VerticalSpread {
     }
   }
 }
-
-extension DateTimeDaysLeft on DateTime {
-  int get daysLeft {
-    final now = DateTime.now();
-    final midnightToday = DateTime(now.year, now.month, now.day);
-    final midnightExpiration = DateTime(year, month, day);
-    return midnightExpiration.difference(midnightToday).inDays;
-  }
-}

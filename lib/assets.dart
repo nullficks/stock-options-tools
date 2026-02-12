@@ -154,7 +154,7 @@ class StockOption extends Expirable {
     super.name,
     super.symbol, {
     required super.underlying,
-    required super.strike,
+    required this.strike,
     required super.expiration,
     required super.daysToExpiration,
     this.isPut = false,
