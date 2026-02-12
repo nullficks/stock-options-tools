@@ -33,13 +33,20 @@ jobs:
     - name: Build web
       run: dart compile js web/main.dart -o web/main.dart.js --minify
       
+    - name: Copy web assets
+      run: |
+        mkdir -p _site
+        cp web/*.html _site/
+        cp web/*.css _site/
+        cp web/*.js _site/
+      
     - name: Setup Pages
       uses: actions/configure-pages@v4
       
     - name: Upload artifact
       uses: actions/upload-pages-artifact@v3
       with:
-        path: './web'
+        path: '_site'
 
   deploy:
     environment:
